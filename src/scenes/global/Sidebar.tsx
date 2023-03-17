@@ -53,14 +53,14 @@ const MySidebar = () => {
 	const colors = tokens(theme.palette.mode)
 	const { collapseSidebar, collapsed } = useProSidebar()
 
-	const [selected, setSelected] = useState("Dashboard")
+	const [selected, setSelected] = useState("")
 
 	return (
 		<Box
 			sx={{
-                "& .ps-active": {
+				"& .ps-active": {
 					color: "#6870fa !important",
-                },
+				},
 				"& .ps-menu-button": {
 					padding: "5px 35px 5px 20px !important",
 				},
@@ -141,13 +141,6 @@ const MySidebar = () => {
 					)}
 					{/* MENU ITEMS */}
 					<Box paddingLeft={collapsed ? undefined : "10%"}>
-						<Typography
-							variant="h6"
-							color={colors.grey[300]}
-							sx={{ m: "15px 0 15px 20px" }}
-						>
-							Data
-						</Typography>
 						<Item
 							title="Dashboard"
 							to="/"
@@ -155,6 +148,13 @@ const MySidebar = () => {
 							selected={selected}
 							setSelected={setSelected}
 						/>
+						<Typography
+							variant="h6"
+							color={colors.grey[300]}
+							sx={{ m: "15px 0 15px 20px" }}
+						>
+							Data
+						</Typography>
 						<Item
 							title="Manage Team"
 							to="/team"
