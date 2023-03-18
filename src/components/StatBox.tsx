@@ -8,12 +8,13 @@ export interface IStatBoxProps {
 	subtitle: string
 	icon: ReactNode
 	progress: number
-	increase: number
+	increase: string
 }
 
 const StatBox = (props: IStatBoxProps) => {
 	const theme = useTheme()
 	const colors = tokens(theme.palette.mode)
+
 	return (
 		<Box width="100%" m="0 30px">
 			<Box display="flex" justifyContent="space-between">
@@ -30,18 +31,19 @@ const StatBox = (props: IStatBoxProps) => {
 				<Box>
 					<ProgressCircle progress={props.progress} />
 				</Box>
-				<Box display="flex" justifyContent="space-between">
-					<Typography variant="h5" sx={{ color: colors.greenAccent[500] }}>
-						{props.subtitle}
-					</Typography>
-					<Typography
-						variant="h5"
-						fontStyle="italic"
-						sx={{ color: colors.greenAccent[600] }}
-					>
-						{props.increase}
-					</Typography>
-				</Box>
+			</Box>
+
+			<Box display="flex" justifyContent="space-between">
+				<Typography variant="h5" sx={{ color: colors.greenAccent[500] }}>
+					{props.subtitle}
+				</Typography>
+				<Typography
+					variant="h5"
+					fontStyle="italic"
+					sx={{ color: colors.greenAccent[600] }}
+				>
+					{props.increase}
+				</Typography>
 			</Box>
 		</Box>
 	)
