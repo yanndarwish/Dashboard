@@ -94,7 +94,7 @@ const MySidebar = () => {
 				backgroundColor={colors.primary[400]}
 				style={{ border: "none", height: "100%" }}
 			>
-				<Menu>
+				<Menu style={{height: "100%" }}>
 					<MenuItem
 						icon={
 							collapsed ? (
@@ -268,7 +268,11 @@ const MySidebar = () => {
 			{isOpen && (
 				<Box
 					sx={{
-						position: "absolute",
+						zIndex: 1,
+						position: "fixed",
+						top: "0",
+						left: "0",
+						bottom: "0",
 						height: "100%",
 						"& .ps-active": {
 							color: "#6870fa !important",
@@ -287,7 +291,7 @@ const MySidebar = () => {
 						style={{
 							border: "none",
 							height: "100%",
-							width: "100%",
+							width: "min(100%, 480px",
 						}}
 					>
 						<Menu
