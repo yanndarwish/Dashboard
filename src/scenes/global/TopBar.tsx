@@ -1,4 +1,10 @@
-import { Box, IconButton, useTheme, InputBase, BoxProps } from "@mui/material"
+import {
+	Box,
+	IconButton,
+	useTheme,
+	InputBase,
+	useMediaQuery,
+} from "@mui/material"
 import { useContext } from "react"
 import { ColorModeContext, tokens } from "../../theme"
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined"
@@ -8,9 +14,8 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined"
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined"
 import SearchIcon from "@mui/icons-material/Search"
 
-export interface ITopBarProps {}
-
-const TopBar = (props: ITopBarProps) => {
+const TopBar = () => {
+	const isNonMobile = useMediaQuery("(min-width:768px)")
 	const theme = useTheme()
 	const colors = tokens(theme.palette.mode)
 	const colorMode = useContext(ColorModeContext)
@@ -20,15 +25,18 @@ const TopBar = (props: ITopBarProps) => {
 			{/* search bar */}
 			<Box
 				sx={{
-					display: "flex,",
+					marginLeft: isNonMobile ? undefined : "50px",
+					display: "flex",
 					backgroundColor: colors.primary[400],
 					borderRadius: "3px",
 				}}
 			>
-				<InputBase sx={{ ml: 2, flx: 1 }} placeholder="Search" />
+				<InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
+				{/* {isNonMobile && */}
 				<IconButton type="button" sx={{ p: 1 }}>
 					<SearchIcon />
 				</IconButton>
+				{/* } */}
 			</Box>
 			{/* ICONs SECTION */}
 			<Box sx={{ display: "flex" }}>
