@@ -20,12 +20,10 @@ import GeographyChart from "../../components/GeographyChart"
 import StatBox from "../../components/StatBox"
 import ProgressCircle from "../../components/ProgressCircle"
 
-export interface IDashboardProps {}
-
-const Dashboard = (props: IDashboardProps) => {
+const Dashboard = () => {
 	const theme = useTheme()
 	const colors = tokens(theme.palette.mode)
-	const isNonMobile = useMediaQuery("(min-width:768px)")
+	const isNonMobile = useMediaQuery("(min-width:1024px)")
 
 	return (
 		<Box m="20px">
