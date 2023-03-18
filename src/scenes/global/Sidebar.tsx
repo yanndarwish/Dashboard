@@ -29,7 +29,7 @@ interface IItem {
 	icon: ReactNode
 	selected: string
 	setSelected: (title: string) => void
-	toggleSidebar: () => void
+	toggleSidebar?: () => void
 }
 
 const Item = ({
@@ -45,7 +45,9 @@ const Item = ({
 
 	const handleClick = () => {
 		setSelected(title)
-		toggleSidebar()
+		if (toggleSidebar) {
+			toggleSidebar()
+		}
 	}
 
 	return (

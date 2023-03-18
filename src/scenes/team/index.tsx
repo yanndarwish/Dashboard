@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material"
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material"
 import { DataGrid, GridColDef } from "@mui/x-data-grid"
 import { tokens } from "../../theme"
 import { mockDataTeam } from "../../data/mockData"
@@ -8,6 +8,7 @@ import SecurityOutlined from "@mui/icons-material/SecurityOutlined"
 import Header from "../../components/Header"
 
 const Team = () => {
+	const isNonMobile = useMediaQuery("(min-width:768px)")
 	const theme = useTheme()
 	const colors = tokens(theme.palette.mode)
 
@@ -62,9 +63,11 @@ const Team = () => {
 						{access === "admin" && <AdminPanelSettingsOutlined />}
 						{access === "manager" && <SecurityOutlined />}
 						{access === "user" && <LockOpenOutlined />}
-						<Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-							{access}
-						</Typography>
+						{isNonMobile && (
+							<Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+								{access}
+							</Typography>
+						)}
 					</Box>
 				)
 			},
