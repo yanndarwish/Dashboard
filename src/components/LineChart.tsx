@@ -47,6 +47,7 @@ const LineChart = (props: ILineChartProps) => {
 					},
 				},
 			}}
+			animate={false}
 			colors={props.isDashboard ? { datum: "color" } : { scheme: "nivo" }}
 			margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
 			xScale={{ type: "point" }}
