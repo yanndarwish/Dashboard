@@ -94,7 +94,7 @@ const MySidebar = () => {
 				backgroundColor={colors.primary[400]}
 				style={{ border: "none", height: "100%" }}
 			>
-				<Menu style={{height: "100%" }}>
+				<Menu style={{ height: "100%" }}>
 					<MenuItem
 						icon={
 							collapsed ? (
@@ -158,7 +158,7 @@ const MySidebar = () => {
 					<Box paddingLeft={collapsed ? undefined : "10%"}>
 						<Item
 							title="Dashboard"
-							to="/"
+							to="/Dashboard"
 							icon={<HomeOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
@@ -360,7 +360,7 @@ const MySidebar = () => {
 							<Box paddingLeft="10%">
 								<Item
 									title="Dashboard"
-									to="/"
+									to="/Dashboard"
 									icon={<HomeOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
