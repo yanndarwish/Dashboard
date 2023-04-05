@@ -2,7 +2,7 @@ import { useState } from "react"
 import FullCalendar from "@fullcalendar/react"
 import { formatDate } from "@fullcalendar/core"
 import dayGridPlugin from "@fullcalendar/daygrid"
-import timeGridPlugin from "@fullcalendar/timeGrid"
+import timeGridPlugin from "@fullcalendar/timegrid"
 import listPlugin from "@fullcalendar/list"
 import interactionPlugin from "@fullcalendar/interaction"
 import {
@@ -85,35 +85,35 @@ const Calendar = () => {
 						))}
 					</List>
 				</Box>
-                {/* CALENDAR */}
-                <Box flex="1 1 100%" ml="15px">
-                    <FullCalendar 
-                        height="75vh"
-                        plugins={[
-                            dayGridPlugin,
-                            timeGridPlugin,
-                            interactionPlugin,
-                            listPlugin
-                        ]}
-                        headerToolbar={{
-                            left: "prev,next today",
-                            center: "title",
-                            right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
-                        }}
-                        initialView="dayGridMonth"
-                        editable={true}
-                        selectable={true}
-                        selectMirror={true}
-                        dayMaxEvents={true}
-                        select={handleDateClick}
-                        eventClick={handleEventClick}
-                        eventsSet={(events) => setCurrentEvents(events)}
-                        initialEvents={[
-                            {id: "1234", title: "All-day event", date:"2023-03-18"},
-                            {id: "4321", title: "Timed event", date:"2023-03-20"}
-                        ]}
-                    />
-                </Box>
+				{/* CALENDAR */}
+				<Box flex="1 1 100%" ml="15px">
+					<FullCalendar
+						height="75vh"
+						plugins={[
+							dayGridPlugin,
+							timeGridPlugin,
+							interactionPlugin,
+							listPlugin,
+						]}
+						headerToolbar={{
+							left: "prev,next today",
+							center: "title",
+							right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+						}}
+						initialView="dayGridMonth"
+						editable={true}
+						selectable={true}
+						selectMirror={true}
+						dayMaxEvents={true}
+						select={handleDateClick}
+						eventClick={handleEventClick}
+						eventsSet={(events) => setCurrentEvents(events)}
+						initialEvents={[
+							{ id: "1234", title: "All-day event", date: "2023-03-18" },
+							{ id: "4321", title: "Timed event", date: "2023-03-20" },
+						]}
+					/>
+				</Box>
 			</Box>
 		</Box>
 	)
