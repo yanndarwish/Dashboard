@@ -79,6 +79,7 @@ const MySidebar = () => {
 		<Box
 			sx={{
 				zIndex: 100,
+				minHeight: "100%",
 				"& .ps-active": {
 					color: "#6870fa !important",
 				},
@@ -275,6 +276,7 @@ const MySidebar = () => {
 						left: "0",
 						bottom: "0",
 						height: "100%",
+						minHeight: "100%",
 						"& .ps-active": {
 							color: "#6870fa !important",
 						},
@@ -292,12 +294,14 @@ const MySidebar = () => {
 						style={{
 							border: "none",
 							height: "100%",
+							minHeight: "100%",
 							width: "min(100%, 480px",
 						}}
 					>
 						<Menu
 							style={{
 								width: "min(100%, 480px",
+								minHeight: "100%",
 								backgroundColor: colors.primary[400],
 							}}
 						>
