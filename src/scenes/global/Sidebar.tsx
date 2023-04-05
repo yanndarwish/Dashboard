@@ -160,7 +160,7 @@ const MySidebar = () => {
 					<Box paddingLeft={collapsed ? undefined : "10%"}>
 						<Item
 							title="Dashboard"
-							to="/Dashboard"
+							to="/"
 							icon={<HomeOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
@@ -174,21 +174,21 @@ const MySidebar = () => {
 						</Typography>
 						<Item
 							title="Manage Team"
-							to="/Dashboard/team"
+							to="/team"
 							icon={<PeopleOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
 						/>
 						<Item
 							title="Contacts"
-							to="/Dashboard/contacts"
+							to="/contacts"
 							icon={<ContactsOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
 						/>
 						<Item
 							title="Invoices Balances"
-							to="/Dashboard/invoices"
+							to="/invoices"
 							icon={<ReceiptOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
@@ -202,21 +202,21 @@ const MySidebar = () => {
 						</Typography>
 						<Item
 							title="Profile Form"
-							to="/Dashboard/form"
+							to="/form"
 							icon={<PersonOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
 						/>
 						<Item
 							title="Calendar"
-							to="/Dashboard/calendar"
+							to="/calendar"
 							icon={<CalendarTodayOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
 						/>
 						<Item
 							title="FAQ Page"
-							to="/Dashboard/faq"
+							to="/faq"
 							icon={<HelpOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
@@ -230,28 +230,28 @@ const MySidebar = () => {
 						</Typography>
 						<Item
 							title="Bar Chart"
-							to="/Dashboard/bar"
+							to="/bar"
 							icon={<BarChartOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
 						/>
 						<Item
 							title="Pie Chart"
-							to="/Dashboard/pie"
+							to="/pie"
 							icon={<PieChartOutlinedOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
 						/>
 						<Item
 							title="Line Chart"
-							to="/Dashboard/line"
+							to="/line"
 							icon={<TimelineOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
 						/>
 						<Item
 							title="Geography Chart"
-							to="/Dashboard/geography"
+							to="/geography"
 							icon={<MapOutlinedIcon />}
 							selected={selected}
 							setSelected={setSelected}
@@ -365,7 +365,7 @@ const MySidebar = () => {
 							<Box paddingLeft="10%">
 								<Item
 									title="Dashboard"
-									to="/Dashboard"
+									to="/"
 									icon={<HomeOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -380,7 +380,7 @@ const MySidebar = () => {
 								</Typography>
 								<Item
 									title="Manage Team"
-									to="/Dashboard/team"
+									to="/team"
 									icon={<PeopleOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -388,7 +388,7 @@ const MySidebar = () => {
 								/>
 								<Item
 									title="Contacts"
-									to="/Dashboard/contacts"
+									to="/contacts"
 									icon={<ContactsOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -396,7 +396,7 @@ const MySidebar = () => {
 								/>
 								<Item
 									title="Invoices Balances"
-									to="/Dashboard/invoices"
+									to="/invoices"
 									icon={<ReceiptOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -411,7 +411,7 @@ const MySidebar = () => {
 								</Typography>
 								<Item
 									title="Profile Form"
-									to="/Dashboard/form"
+									to="/form"
 									icon={<PersonOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -419,7 +419,7 @@ const MySidebar = () => {
 								/>
 								<Item
 									title="Calendar"
-									to="/Dashboard/calendar"
+									to="/calendar"
 									icon={<CalendarTodayOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -427,7 +427,7 @@ const MySidebar = () => {
 								/>
 								<Item
 									title="FAQ Page"
-									to="/Dashboard/faq"
+									to="/faq"
 									icon={<HelpOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -442,7 +442,7 @@ const MySidebar = () => {
 								</Typography>
 								<Item
 									title="Bar Chart"
-									to="/Dashboard/bar"
+									to="/bar"
 									icon={<BarChartOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -450,7 +450,7 @@ const MySidebar = () => {
 								/>
 								<Item
 									title="Pie Chart"
-									to="/Dashboard/pie"
+									to="/pie"
 									icon={<PieChartOutlinedOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -458,7 +458,7 @@ const MySidebar = () => {
 								/>
 								<Item
 									title="Line Chart"
-									to="/Dashboard/line"
+									to="/line"
 									icon={<TimelineOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
@@ -466,7 +466,7 @@ const MySidebar = () => {
 								/>
 								<Item
 									title="Geography Chart"
-									to="/Dashboard/geography"
+									to="/geography"
 									icon={<MapOutlinedIcon />}
 									selected={selected}
 									setSelected={setSelected}
