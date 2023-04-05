@@ -78,6 +78,7 @@ const MySidebar = () => {
 	return isNonMobile ? (
 		<Box
 			sx={{
+				zIndex: 100,
 				"& .ps-active": {
 					color: "#6870fa !important",
 				},
@@ -268,7 +269,7 @@ const MySidebar = () => {
 			{isOpen && (
 				<Box
 					sx={{
-						zIndex: 1,
+						zIndex: 100,
 						position: "fixed",
 						top: "0",
 						left: "0",
