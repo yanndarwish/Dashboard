@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material"
 import { tokens } from "../theme"
 
 export interface ILineChartProps {
-    isDashboard: boolean
+	isDashboard: boolean
 }
 
 const LineChart = (props: ILineChartProps) => {
@@ -62,15 +62,19 @@ const LineChart = (props: ILineChartProps) => {
 			curve="catmullRom"
 			axisTop={null}
 			axisRight={null}
-			axisBottom={{
-				// orient: "bottom",
-				tickSize: 5,
-				tickPadding: 5,
-				tickRotation: 0,
-				legend: props.isDashboard ? undefined : "transportation",
-				legendOffset: 36,
-				legendPosition: "middle",
-			}}
+			axisBottom={
+				props.isDashboard
+					? null
+					: {
+							// orient: "bottom",
+							tickSize: 5,
+							tickPadding: 5,
+							tickRotation: -75,
+							legend: props.isDashboard ? undefined : "transportation",
+							legendOffset: 36,
+							legendPosition: "middle",
+					  }
+			}
 			axisLeft={{
 				// orient: "left",
 				tickValues: 5,
