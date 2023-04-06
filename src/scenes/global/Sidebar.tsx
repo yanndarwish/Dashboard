@@ -79,7 +79,7 @@ const MySidebar = () => {
 		<Box
 			sx={{
 				zIndex: 100,
-				minHeight: "100%",
+				minHeight: "100vh",
 				"& .ps-active": {
 					color: "#6870fa !important",
 				},
@@ -274,7 +274,6 @@ const MySidebar = () => {
 						position: "fixed",
 						top: "0",
 						left: "0",
-						bottom: "0",
 						height: "100%",
 						minHeight: "100%",
 						"& .ps-active": {
